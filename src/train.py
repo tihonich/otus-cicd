@@ -3,19 +3,13 @@ Main script to train and save the model.
 """
 
 import os
-
-print(os.getcwd())
-
 import sys
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-
 from loguru import logger
-
 from src.data import load_data, save_metadata, split_data
 from src.models import create_model, evaluate_model, save_model, train_model
 
+print(os.getcwd())
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def main() -> None:
     """

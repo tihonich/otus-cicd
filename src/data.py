@@ -9,18 +9,13 @@ Description:
 import os
 import sys
 from typing import List, Tuple
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-
 import joblib
 import numpy as np
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-
 from config.variables import DATA_DIR
 
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # pylint: disable=no-member
 def load_data() -> Tuple[np.ndarray, np.ndarray, List[str], List[str]]:
     """
