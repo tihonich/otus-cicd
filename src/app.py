@@ -4,13 +4,16 @@ Main application
 
 import os
 import sys
+
 import pandas as pd
 import streamlit as st
+
 from src.data import load_metadata
 from src.models import load_model
 
 print(os.getcwd())
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 
 def main():
     """

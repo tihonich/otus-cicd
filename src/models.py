@@ -9,13 +9,16 @@ saving and loading associated metadata.
 import os
 import sys
 from typing import Tuple
+
 import joblib
 import numpy as np
 from sklearn.base import BaseEstimator
 from sklearn.ensemble import RandomForestClassifier
+
 from config.variables import MODELS_DIR
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 
 def create_model(
     model=RandomForestClassifier, n_estimators: int = 100, random_state: int = 42
